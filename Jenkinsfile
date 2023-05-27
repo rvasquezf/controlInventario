@@ -8,6 +8,7 @@ pipeline {
     stages {
 	stage('Build') {
             steps {
+                git url: 'https://github.com/rvasquezf/controlInventario.git', branch: 'main'
                 sh 'mvn clean package'
             }
 	}
